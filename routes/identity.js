@@ -16,6 +16,7 @@ router.post('/refresh-token', Identity.refreshToken);
 router.post('/generate-otp', authenticate, Identity.generateOTP);
 router.post('/verify-otp/:token', authenticate, Identity.verifyOTP);
 router.post('/validate-otp', Identity.validateOTP);
+router.post('/disable-otp', authenticate, Identity.disableOTP);
 
 router.post('/admin/change-password', Identity.changePassword);
 router.get('/admin/profile', Identity.profile);

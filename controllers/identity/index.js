@@ -1,5 +1,6 @@
 const changePassword = require('./change-password');
 const confirm = require('./confirm');
+const disableOTP = require('./disable-otp');
 const forgot = require('./forgot');
 const generateOTP = require('./generate-otp');
 const login = require('./login');
@@ -13,6 +14,7 @@ const verifyOTP = require('./verify-otp');
 module.exports = {
   changePassword,
   confirm,
+  disableOTP,
   forgot,
   generateOTP,
   login,
