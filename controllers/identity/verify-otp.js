@@ -16,7 +16,7 @@ module.exports = async (req, res) => {
 
   const isValid = authenticator.check(token, identity.secret);
   if (!isValid) {
-    return res.status(401).send({ message: 'Invalid 2FA token' });
+    throw error(401, 'Invalid 2FA token');
   }
 
   identity.otpEnabled = true;
