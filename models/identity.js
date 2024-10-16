@@ -25,6 +25,13 @@ const schema = new Schema(
       minlength: 8,
       select: false,
     },
+    secret: {
+      type: String,
+    },
+    otpEnabled: {
+      type: Boolean,
+      default: false,
+    },
     loginAttempts: {
       type: Number,
       default: 0,

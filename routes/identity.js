@@ -1,5 +1,5 @@
 const { Router } = require('express');
-const { recaptcha, validate } = require('express-goodies/middleware');
+const { recaptcha, validate, authenticate } = require('express-goodies/middleware');
 const { Identity } = require('../controllers');
 const { loginSchema } = require('../schemas');
 
@@ -13,6 +13,8 @@ router.post('/reset/:hash', recaptcha, Identity.reset);
 
 router.post('/logout', Identity.logout);
 router.post('/refresh-token', Identity.refreshToken);
+router.post('/generate-otp', authenticate, Identity.generateOTP);
+router.post('/verify-otp/:token', authenticate, Identity.verifyOTP);
 
 router.post('/admin/change-password', Identity.changePassword);
 router.get('/admin/profile', Identity.profile);
