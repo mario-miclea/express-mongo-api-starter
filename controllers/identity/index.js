@@ -7,6 +7,7 @@ const logout = require('./logout');
 const profile = require('./profile');
 const refreshToken = require('./refresh-token');
 const reset = require('./reset');
+const validateOTP = require('./validate-otp');
 const verifyOTP = require('./verify-otp');
 
 module.exports = {
@@ -19,5 +20,6 @@ module.exports = {
   profile,
   refreshToken,
   reset,
+  validateOTP,
   verifyOTP,
 };
